@@ -1,1 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organigrama Procuración General</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <h1>Organigrama Procuración General</h1>
+            <p>Visualización jerárquica de la estructura organizacional</p>
+        </div>
+
+        <div class="row search-container">
+            <div class="col-md-6 offset-md-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="search-input"
+                        placeholder="Buscar por nombre, cargo o departamento...">
+                    <button class="btn btn-primary" id="search-btn">Buscar</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 offset-md-3 mb-3">
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-outline-primary me-2" onclick="expandAll()">Expandir Todo</button>
+                    <button class="btn btn-outline-secondary" onclick="collapseAll()">Colapsar Todo</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row breadcrumb-container">
+            <div class="col-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb" id="navigation-breadcrumb">
+                        <li class="breadcrumb-item active">Inicio</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <div class="organigrama-container">
+            <!-- Nodo Principal -->
+            <!-- Nivel 1 -->
+            <div class="node node-principal" id="node-1" data-bs-toggle="tooltip" data-bs-placement="top"
+                title="Cargo principal de la procuración general">
+                <div class="row align-items-center">
+                    <div class="col-md-1 col-sm-2">
+                        <img src="/api/placeholder/80/80" alt="Procurador General" class="img-fluid profile-img">
+                    </div>
+                    <div class="col-md-10 col-sm-8">
+                        <div class="node-title">Procuración General</div>
+                        <div class="node-person">Dr. Julio Marcelo Conte-Grand</div>
+                        <div class="node-subtitle">Procurador General</div>
+                    </div>
+                    <div class="col-md-1 col-sm-2 text-end">
+                        <div class="toggle-btn" onclick="toggleChildren('node-1')">+</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hijos nivel 1 -->
+            <div class="children-container" id="children-node-1">
+                <!-- Nivel 2.1 -->
+                <div class="node node-secundario" id="node-2" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Área de coordinación jurídica">
+                    <div class="branch"></div>
+                    <div class="row align-items-center">
+                        <div class="col-md-1 col-sm-2">
+                            <img src="/api/placeholder/80/80" alt="Director General" class="img-fluid profile-img">
+                        </div>
+                        <div class="col-md-10 col-sm-8">
+                            <div class="node-title">Secretaría de Administración</div>
+                            <div class="node-person">Dr. Javier Miguel Bernasconi</div>
+                            <div class="node-subtitle">Secretario</div>
+                        </div>
+                        <div class="col-md-1 col-sm-2 text-end">
+                            <div class="toggle-btn" onclick="toggleChildren('node-2')">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hijos nivel 2.1 -->
+                <div class="children-container" id="children-node-2">
+                    <!-- 3.1.1 -->
+                    <div class="node node-terciario" id="node-3">
+                        <div class="branch"></div>
+                        <div class="row align-items-center">
+                            <div class="col-md-1 col-sm-2">
+                                <img src="/api/placeholder/80/80" alt="Jefe Departamento" class="img-fluid profile-img">
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <div class="node-title">Subsecretaría de Presupuesto y Contrataciones</div>
+                                <div class="node-person">Arias, Dardo Joaquín</div>
+                                <div class="node-subtitle">Subsecretario</div>
+                            </div>
+                            <div class="col-md-1 col-sm-2 text-end">
+                                <div class="toggle-btn" onclick="toggleChildren('node-3')">+</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hijos nivel 3.1.1 -->
+                    <div class="children-container" id="children-node-3">
+                        <!-- 4.1.1 -->
+                        <div class="node node-cuarto" id="node-4">
+                            <div class="branch"></div>
+                            <div class="row align-items-center">
+                                <div class="col-md-1 col-sm-2">
+                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
+                                        class="img-fluid profile-img">
+                                </div>
+                                <div class="col-md-10 col-sm-9">
+                                    <div class="node-title">Departamento de Presupuesto</div>
+                                    <div class="node-person">Martín, Verónica Juleta</div>
+                                    <div class="node-subtitle">Jefa</div>
+                                    <div class="node-person">Quiñones, Evangelina Elizabeth</div>
+                                    <div class="node-subtitle">Subjefa</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="node node-cuarto" id="node-5">
+                            <div class="branch"></div>
+                            <div class="row align-items-center">
+                                <div class="col-md-1 col-sm-2">
+                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
+                                        class="img-fluid profile-img">
+                                </div>
+                                <div class="col-md-10 col-sm-9">
+                                    <div class="node-title">Departamento de Contrataciones</div>
+                                    <div class="node-person">Pizutto, Laura</div>
+                                    <div class="node-subtitle">Jefa</div>
+                                    <div class="node-person">De la Fuente, Eloy Manuel</div>
+                                    <div class="node-subtitle">Subjefa</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="node node-cuarto" id="node-6">
+                            <div class="branch"></div>
+                            <div class="row align-items-center">
+                                <div class="col-md-1 col-sm-2">
+                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
+                                        class="img-fluid profile-img">
+                                </div>
+                                <div class="col-md-10 col-sm-9">
+                                    <div class="node-title">Departamento de Locaciones Inmuebles y Gestión de Seguros</div>
+                                    <div class="node-person">Machado, Andrea Bibiana</div>
+                                    <div class="node-subtitle">Jefa</div>
+                                    <div class="node-person">Alfano, Julia</div>
+                                    <div class="node-subtitle">Subjefa</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node node-terciario" id="node-7">
+                        <div class="branch"></div>
+                        <div class="row align-items-center">
+                            <div class="col-md-1 col-sm-2">
+                                <img src="/api/placeholder/80/80" alt="Jefe Departamento" class="img-fluid profile-img">
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <div class="node-title">Subsecretaría de Administración Contable</div>
+                                <div class="node-person">Carreto, Pedro J.</div>
+                                <div class="node-subtitle">Subsecretario</div>
+                            </div>
+                            <div class="col-md-1 col-sm-2 text-end">
+                                <div class="toggle-btn" onclick="toggleChildren('node-7')">+</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hijos nivel 3.1.2 -->
+                    <div class="children-container" id="children-node-7">
+                        <!-- 4.2.1 -->
+                        <div class="node node-cuarto" id="node-8">
+                            <div class="branch"></div>
+                            <div class="row align-items-center">
+                                <div class="col-md-1 col-sm-2">
+                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
+                                        class="img-fluid profile-img">
+                                </div>
+                                <div class="col-md-10 col-sm-9">
+                                    <div class="node-title">Departamento de Liquidación Contable</div>
+                                    <div class="node-person">Quitegui, Pilar</div>
+                                    <div class="node-subtitle">Subjefa</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="node node-cuarto" id="node-9">
+                            <div class="branch"></div>
+                            <div class="row align-items-center">
+                                <div class="col-md-1 col-sm-2">
+                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
+                                        class="img-fluid profile-img">
+                                </div>
+                                <div class="col-md-10 col-sm-9">
+                                    <div class="node-title">Departamento de Liquidación de Sueldos</div>
+                                    <div class="node-person">Labombarda, Gustavo</div>
+                                    <div class="node-subtitle">Jefe</div>
+                                    <div class="node-person">Merbilhaa, Leandro</div>
+                                    <div class="node-subtitle">Subjefe</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="node node-cuarto" id="node-10">
+                            <div class="branch"></div>
+                            <div class="row align-items-center">
+                                <div class="col-md-1 col-sm-2">
+                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
+                                        class="img-fluid profile-img">
+                                </div>
+                                <div class="col-md-10 col-sm-9">
+                                    <div class="node-title">Departamento de Rendición de Cuentas y Patrimonio</div>
+                                    <div class="node-person">Bacciadone, María Inés</div>
+                                    <div class="node-subtitle">Subjefa</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="node node-cuarto" id="node-11">
+                            <div class="branch"></div>
+                            <div class="row align-items-center">
+                                <div class="col-md-1 col-sm-2">
+                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
+                                        class="img-fluid profile-img">
+                                </div>
+                                <div class="col-md-10 col-sm-9">
+                                    <div class="node-title">Departamento de Tesorería</div>
+                                    <div class="node-person">Lozano, Silvina</div>
+                                    <div class="node-subtitle">Jefa</div>
+                                    <div class="node-person">Cristaldo, Darío</div>
+                                    <div class="node-subtitle">Subjefe</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node node-terciario" id="node-12">
+                        <div class="branch"></div>
+                        <div class="row align-items-center">
+                            <div class="col-md-1 col-sm-2">
+                                <img src="/api/placeholder/80/80" alt="Jefe Departamento" class="img-fluid profile-img">
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <div class="node-title">Unidad de Coordinación Técnico Legal y de Relacionamiento
+                                    Institucional</div>
+                                <div class="node-person">Rouillet, Gabriel Teófilo</div>
+                                <div class="node-subtitle">Director</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node node-terciario" id="node-13">
+                        <div class="branch"></div>
+                        <div class="row align-items-center">
+                            <div class="col-md-1 col-sm-2">
+                                <img src="/api/placeholder/80/80" alt="Jefe Departamento" class="img-fluid profile-img">
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <div class="node-title">Unidad de Coordinación Técnica de las Delegaciones
+                                    Administrativas Departamentales</div>
+                                <div class="node-person">Gentili, Mariana Marcela</div>
+                                <div class="node-subtitle">Directora</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nivel 2.2 -->
+                <div class="node node-secundario" id="node-14" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Área de asuntos fiscales">
+                    <div class="branch"></div>
+                    <div class="row align-items-center">
+                        <div class="col-md-1 col-sm-2">
+                            <img src="/api/placeholder/80/80" alt="Fiscal General" class="img-fluid profile-img">
+                        </div>
+                        <div class="col-md-10 col-sm-8">
+                            <div class="node-title">Secretaría de Control Disciplinario y Enjuiciamiento</div>
+                            <div class="node-person">Dr. Miguel de Lezica</div>
+                            <div class="node-subtitle">Secretario</div>
+                        </div>
+                        <div class="col-md-1 col-sm-2 text-end">
+                            <div class="toggle-btn" onclick="toggleChildren('node-14')">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor de hijos -->
+                <div class="children-container" id="children-node-14">
+                    <!-- Nivel 3 -->
+                    <div class="node node-terciario" id="node-15">
+                        <div class="branch"></div>
+                        <div class="row align-items-center">
+                            <div class="col-md-1 col-sm-2">
+                                <img src="/api/placeholder/80/80" alt="Fiscal" class="img-fluid profile-img">
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <div class="node-title">Departamento de Control Disciplinario</div>
+                                <div class="node-person">Dra. María Julieta Battistotti</div>
+                                <div class="node-subtitle">Subsecretaria</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="node node-terciario" id="node-16">
+                        <div class="branch"></div>
+                        <div class="row align-items-center">
+                            <div class="col-md-1 col-sm-2">
+                                <img src="/api/placeholder/80/80" alt="Fiscal" class="img-fluid profile-img">
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <div class="node-title">Departamento de Enjuiciamiento de Magistrados</div>
+                                <div class="node-person">Dr. Federico Agustín Mentasti</div>
+                                <div class="node-subtitle">Subsecretario</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nivel 2.3 -->
+                <div class="node node-secundario" id="node-17" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Área administrativa">
+                    <div class="branch"></div>
+                    <div class="row align-items-center">
+                        <div class="col-md-1 col-sm-2">
+                            <img src="/api/placeholder/80/80" alt="Secretario General" class="img-fluid profile-img">
+                        </div>
+                        <div class="col-md-10 col-sm-8">
+                            <div class="node-title">Secretaría de Estrategia Institucional y Gestión</div>
+                            <div class="node-person">Dra. Susana Elena Deferrari</div>
+                            <div class="node-subtitle">Secretaria</div>
+                        </div>
+                        <div class="col-md-1 col-sm-2 text-end">
+                            <div class="toggle-btn" onclick="toggleChildren('node-17')">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor de hijos -->
+                <div class="children-container" id="children-node-17">
+                    <!-- Nivel 3 -->
+                    <div class="node node-terciario" id="node-18">
+                        <div class="branch"></div>
+                        <div class="row align-items-center">
+                            <div class="col-md-1 col-sm-2">
+                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <div class="node-title">Departamento de Control de Gestión</div>
+                                <div class="node-person">Lic. Ricardo Burry</div>
+                                <div class="node-subtitle">Subsecretario</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="node node-terciario" id="node-19">
+                        <div class="branch"></div>
+                        <div class="row align-items-center">
+                            <div class="col-md-1 col-sm-2">
+                                <img src="/api/placeholder/80/80" alt="Director Administración"
+                                class="img-fluid profile-img">
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <div class="node-title">Área Social</div>
+                            </div>
+                            <div class="col-md-1 col-sm-2 text-end">
+                                <div class="toggle-btn" onclick="toggleChildren('node-19')">+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hijos nivel 3.1.1 -->
+                    <div class="children-container" id="children-node-19">
+                        <div class="node node-cuarto" id="node-20">
+
+                        </div>
+
+                        <div class="node node-cuarto" id="node-21">
+
+                        </div>
+
+                        <div class="node node-cuarto" id="node-22">
+
+                        </div>
+                        
+                        <div class="node node-cuarto" id="node-23">
+                        
+                        </div>
+
+                        <div class="node node-cuarto" id="node-24">
+
+                        </div>    
+                    </div>
+
+                    <div class="node node-terciario" id="node-25">
+                        <div class="branch"></div>
+                        <div class="row align-items-center">
+                            <div class="col-md-1 col-sm-2">
+                                <img src="/api/placeholder/80/80" alt="Director Sistemas" class="img-fluid profile-img">
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <div class="node-title"></div>
+                                <div class="node-person"></div>
+                                <div class="node-subtitle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nivel 2.4 -->
+                <div class="node node-secundario" id="node-13" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Área de comunicación">
+                    <div class="branch"></div>
+                    <div class="row align-items-center">
+                        <div class="col-md-1 col-sm-2">
+                            <img src="/api/placeholder/80/80" alt="Secretaria General" class="img-fluid profile-img">
+                        </div>
+                        <div class="col-md-10 col-sm-8">
+                            <div class="node-title">Secretaría General</div>
+                            <div class="node-person">Dr. Carlos Enrique Pettoruti</div>
+                            <div class="node-subtitle">Secretario</div>
+                        </div>
+                        <div class="col-md-1 col-sm-2 text-end">
+                            <div class="toggle-btn" onclick="toggleChildren('node-13')">+</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenedor de hijos -->
+                <div class="children-container" id="children-node-13">
+                    <!-- Nivel 3 -->
+                    <div class="node node-terciario" id="node-14">
+                        <div class="branch"></div>
+                        <div class="row align-items-center">
+                            <div class="col-md-1 col-sm-2">
+                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
+                            </div>
+                            <div class="col-md-10 col-sm-9">
+                                <div class="node-title">Recursos Humanos</div>
+                                <div class="node-person">Lic. Carolina Gómez</div>
+                                <div class="node-subtitle">Director</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nivel 2.5 -->
+                <div class="node node-secundario" id="node-15" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Área de política institucional">
+                    <div class="branch"></div>
+                    <div class="row align-items-center">
+                        <div class="col-md-1 col-sm-2">
+                            <img src="/api/placeholder/80/80" alt="Secretaria General" class="img-fluid profile-img">
+                        </div>
+                        <div class="col-md-10 col-sm-8">
+                            <div class="node-title">Secretaría de Política Criminal, Coordinación Fiscal e Instrucción
+                                Penal</div>
+                            <div class="node-person">Dr. Francisco Pont Vergés</div>
+                            <div class="node-subtitle">Secretario</div>
+                        </div>
+                        <div class="col-md-1 col-sm-2 text-end">
+                            <div class="toggle-btn" onclick="toggleChildren('node-15')">+</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Inicializar tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+
+        // Función para expandir/colapsar nodos
+        function toggleChildren(nodeId) {
+            const node = document.getElementById(nodeId);
+            const toggleBtn = node.querySelector('.toggle-btn');
+            const childrenContainer = document.getElementById('children-' + nodeId);
+
+            if (node.classList.contains('expanded')) {
+                node.classList.remove('expanded');
+                toggleBtn.textContent = '+';
+                childrenContainer.style.display = 'none';
+            } else {
+                node.classList.add('expanded');
+                toggleBtn.textContent = '-';
+                childrenContainer.style.display = 'block';
+            }
+
+            // Actualizar breadcrumb
+            updateBreadcrumb(nodeId, node.querySelector('.node-title').textContent);
+        }
+
+        // Función de búsqueda
+        document.getElementById('search-btn').addEventListener('click', function () {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const nodes = document.querySelectorAll('.node');
+            let foundAny = false;
+
+            nodes.forEach(node => {
+                const nodeText = node.textContent.toLowerCase();
+                if (nodeText.includes(searchTerm)) {
+                    foundAny = true;
+                    node.style.boxShadow = '0 0 10px 3px #0d6efd';
+                    setTimeout(() => {
+                        node.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 100);
+
+                    // Expandir padres si es necesario
+                    let parentNode = node.closest('.children-container');
+                    while (parentNode) {
+                        const parentId = parentNode.id.replace('children-', '');
+                        const parent = document.getElementById(parentId);
+                        if (parent) {
+                            parent.classList.add('expanded');
+                            const toggleBtn = parent.querySelector('.toggle-btn');
+                            if (toggleBtn) toggleBtn.textContent = '-';
+                            parentNode.style.display = 'block';
+                        }
+                        parentNode = parent ? parent.closest('.children-container') : null;
+                    }
+                } else {
+                    node.style.boxShadow = 'none';
+                }
+            });
+
+            if (!foundAny) {
+                alert('No se encontraron resultados para: ' + searchTerm);
+            }
+        });
+
+        // Enter key para buscar
+        document.getElementById('search-input').addEventListener('keypress', function (e) {
+            if (e.key === 'Enter') {
+                document.getElementById('search-btn').click();
+            }
+        });
+
+        // Actualizar las migas de pan (breadcrumb)
+        function updateBreadcrumb(nodeId, nodeTitle) {
+            const breadcrumb = document.getElementById('navigation-breadcrumb');
+
+            // Reset breadcrumb to home only
+            breadcrumb.innerHTML = '<li class="breadcrumb-item"><a href="#" onclick="resetView()">Inicio</a></li>';
+
+            // Add current location
+            const li = document.createElement('li');
+            li.classList.add('breadcrumb-item', 'active');
+            li.textContent = nodeTitle;
+            breadcrumb.appendChild(li);
+        }
+
+        // Resetear a la vista inicial
+        function resetView() {
+            collapseAll();
+            document.getElementById('navigation-breadcrumb').innerHTML = '<li class="breadcrumb-item active">Inicio</li>';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Expandir todos los nodos
+        function expandAll() {
+            const nodes = document.querySelectorAll('.node');
+            nodes.forEach(node => {
+                const nodeId = node.id;
+                if (nodeId && document.getElementById('children-' + nodeId)) {
+                    node.classList.add('expanded');
+                    const toggleBtn = node.querySelector('.toggle-btn');
+                    if (toggleBtn) toggleBtn.textContent = '-';
+                    const childrenContainer = document.getElementById('children-' + nodeId);
+                    if (childrenContainer) childrenContainer.style.display = 'block';
+                }
+            });
+        }
+
+        // Colapsar todos los nodos
+        function collapseAll() {
+            const nodes = document.querySelectorAll('.node');
+            nodes.forEach(node => {
+                const nodeId = node.id;
+                if (nodeId && document.getElementById('children-' + nodeId)) {
+                    node.classList.remove('expanded');
+                    const toggleBtn = node.querySelector('.toggle-btn');
+                    if (toggleBtn) toggleBtn.textContent = '+';
+                    const childrenContainer = document.getElementById('children-' + nodeId);
+                    if (childrenContainer) childrenContainer.style.display = 'none';
+                }
+            });
+
+            // Reset breadcrumb
+            document.getElementById('navigation-breadcrumb').innerHTML = '<li class="breadcrumb-item active">Inicio</li>';
+        }
+    </script>
+</body>
+
+</html>
