@@ -71,6 +71,55 @@ body {
     color: #6c757d;
 }
 
+.node-contact-info {
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px dashed rgba(0,0,0,0.1);
+    font-size: 11px;
+    color: #6c757d;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.contact-icon {
+    margin-right: 5px;
+    font-size: 12px;
+    width: 14px;
+    height: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-address::before {
+    content: "📍";
+    margin-right: 5px;
+}
+
+.contact-phone::before {
+    content: "📞";
+    margin-right: 5px;
+}
+
+.contact-email::before {
+    content: "✉️";
+    margin-right: 5px;
+}
+
+.node-principal .node-contact-info {
+    color: rgba(255,255,255,0.9);
+    border-top-color: rgba(255,255,255,0.2);
+}
+
+.node-secundario .node-contact-info {
+    color: rgba(255,255,255,0.9);
+    border-top-color: rgba(255,255,255,0.2);
+}
+
 .profile-img {
     border: 2px solid #0d6efd;
     max-width: 80px;
@@ -158,16 +207,6 @@ body {
     margin-bottom: 20px;
 }
 
-.vacant-badge {
-    font-size: 11px;
-    background-color: #ffc107;
-    color: #212529;
-    padding: 2px 5px;
-    border-radius: 3px;
-    display: inline-block;
-    margin-bottom: 5px;
-}
-
 @media (max-width: 768px) {
     .node-secundario {
         margin-left: 20px;
@@ -183,5 +222,9 @@ body {
     
     .profile-img {
         max-width: 60px;
+    }
+    
+    .node-contact-info {
+        font-size: 10px;
     }
 }
