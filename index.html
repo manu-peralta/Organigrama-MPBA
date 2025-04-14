@@ -49,23 +49,22 @@
         <div class="organigrama-container">
             <!-- Nodo Principal -->
             <!-- Nivel 1 -->
-            <div class="node node-principal" id="node-1" data-bs-toggle="tooltip" data-bs-placement="top"
-                title="Cargo principal de la procuración general">
+            <div class="node node-principal" id="node-1" data-bs-toggle="tooltip" data-bs-placement="top" title="Procuración General" onclick="toggleChildren('node-1')">
                 <div class="row align-items-center">
                     <div class="col-md-1 col-sm-2">
-                        <img src="/api/placeholder/80/80" alt="Procurador General" class="img-fluid profile-img">
+                        <img src="assets/conte-grand.jpg" class="img-fluid profile-img">
                     </div>
                     <div class="col-md-10 col-sm-8">
                         <div class="node-title">Procuración General</div>
                         <div class="node-person">
                             <i class="bi bi-person-circle"> Dr. Julio Marcelo Conte-Grand</i>
                         </div>
-                        <div class="node-subtitle">
+                        <div class="node-cargo">
                             <i class="bi bi-person-workspace"> Procurador General</i>
                         </div>
                     </div>
                     <div class="col-md-1 col-sm-2 text-end">
-                        <div class="toggle-btn" onclick="toggleChildren('node-1')">+</div>
+                        <div class="toggle-btn" >+</div>
                     </div>
                 </div>
             </div>
@@ -73,19 +72,18 @@
             <!-- Hijos nivel 1 -->
             <div class="children-container" id="children-node-1">
                 <!-- Nivel 2.1 -->
-                <div class="node node-secundario" id="node-2" data-bs-toggle="tooltip" data-bs-placement="top"
-                    title="Área de coordinación jurídica">
+                <div class="node node-secundario dependencia-1" id="node-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Secretaría de Administración">
                     <div class="branch"></div>
                     <div class="row align-items-center">
                         <div class="col-md-1 col-sm-2">
-                            <img src="/api/placeholder/80/80" alt="Director General" class="img-fluid profile-img">
+                            <img src="assets/miguel-bernasconi.jpg" alt="Javier Miguel Bernasconi" class="img-fluid profile-img">
                         </div>
                         <div class="col-md-10 col-sm-8">
                             <div class="node-title">Secretaría de Administración</div>
                             <div class="node-person">
                                 <i class="bi bi-person-circle"> Dr. Javier Miguel Bernasconi</i>
                             </div>
-                            <div class="node-subtitle">
+                            <div class="node-cargo">
                                 <i class="bi bi-person-workspace"> Secretario</i>
                             </div>
                         </div>
@@ -98,22 +96,19 @@
                 <!-- Hijos nivel 2.1 -->
                 <div class="children-container" id="children-node-2">
                     <!-- 3.1.1 -->
-                    <div class="node node-terciario" id="node-3">
+                    <div class="node node-terciario dependencia-1" id="node-3">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Jefe Departamento" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Subsecretaría de Presupuesto y Contrataciones</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Arias, Dardo Joaquín</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretario</i>
                                 </div>
                                 <div class="node-contact-info">
-                                    <div class="contact-address"> 50 889 La Plata</div>
+                                    <div class="contact-address">Calle 50 N°889 La Plata</div>
                                     <div class="contact-phone">Teléfono: (0221) 412-1000 Int. 1172</div>
                                 </div>
                             </div>
@@ -126,96 +121,98 @@
                     <!-- Hijos nivel 3.1.1 -->
                     <div class="children-container" id="children-node-3">
                         <!-- 4.1.1 -->
-                        <div class="node node-cuarto" id="node-4">
+                        <div class="node node-cuarto dependencia-1" id="node-4">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Departamento de Presupuesto</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Martín, Verónica Juleta</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Jefa</i>
                                     </div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Quiñones, Evangelina Elizabeth</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subjefa</i>
+                                    </div>
+                                    <div class="node-contact-info">
+                                        <div class="contact-address">Calle 50 N°889 La Plata</div>
+                                        <div class="contact-phone">+54 (221) 509-6665</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-5">
+                        <div class="node node-cuarto dependencia-1" id="node-5">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Departamento de Contrataciones</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Pizutto, Laura</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Jefa</i>
                                     </div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> De la Fuente, Eloy Manuel</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subjefa</i>
+                                    </div>
+                                    <div class="node-contact-info">
+                                        <div class="contact-address">Calle 50 N°889 La Plata</div>
+                                        <div class="contact-phone">+54 (221) 509-6641 / +54 (221) 509-6642 / +54 (221) 509-6640 / +54 (221) 416-5882 </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-6">
+                        <div class="node node-cuarto dependencia-1" id="node-6">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Departamento de Locaciones Inmuebles y Gestión de Seguros
                                     </div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Machado, Andrea Bibiana</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Jefa</i>
                                     </div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Alfano, Julia</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subjefa</i>
+                                    </div>
+                                    <div class="node-contact-info">
+                                        <div class="contact-address">Calle 50 N°889 La Plata</div>
+                                        <div class="contact-phone">(221) 507-4087/ (221) 363-7025/ (221) 640-7995</div>
+                                        <div class="contact-email">inmuebles@mpba.gov.ar</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-7">
+                    <div class="node node-terciario dependencia-1" id="node-7">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Jefe Departamento" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Subsecretaría de Administración Contable</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Carreto, Pedro J.</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretario</i>
+                                </div>
+                                <div class="node-contact-info">
+                                    <div class="contact-address">Calle 50 N°889 La Plata</div>
+                                    <div class="contact-phone">(0221) 412-1000 Int. 1304</div>
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-2 text-end">
@@ -227,128 +224,130 @@
                     <!-- Hijos nivel 3.1.2 -->
                     <div class="children-container" id="children-node-7">
                         <!-- 4.2.1 -->
-                        <div class="node node-cuarto" id="node-8">
+                        <div class="node node-cuarto dependencia-1" id="node-8">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Departamento de Liquidación Contable</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Quitegui, Pilar</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subjefa</i>
+                                    </div>
+                                    <div class="node-contact-info">
+                                        <div class="contact-address">Calle 50 N°889 La Plata</div>
+                                        <div class="contact-phone">+54 (221) 509-6651</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-9">
+                        <div class="node node-cuarto dependencia-1" id="node-9">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Departamento de Liquidación de Sueldos</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Labombarda, Gustavo</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Jefe</i>
                                     </div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Merbilhaa, Leandro</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subjefe</i>
+                                    </div>
+                                    <div class="node-contact-info">
+                                        <div class="contact-address">Calle 50 N°889 La Plata</div>
+                                        <div class="contact-phone">(221) 412-1000</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-10">
+                        <div class="node node-cuarto dependencia-1" id="node-10">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Departamento de Rendición de Cuentas y Patrimonio</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Bacciadone, María Inés</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subjefa</i>
+                                    </div>
+                                    <div class="node-contact-info">
+                                        <div class="contact-address">Calle 50 N°889 La Plata</div>
+                                        <div class="contact-phone">(221) 412-1000</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-11">
+                        <div class="node node-cuarto dependencia-1" id="node-11">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Departamento de Tesorería</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Lozano, Silvina</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Jefa</i>
                                     </div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Cristaldo, Darío</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subjefe</i>
+                                    </div>
+                                    <div class="node-contact-info">
+                                        <div class="contact-address">Calle 50 N°889 La Plata</div>
+                                        <div class="contact-phone">+54 (221) 509-6656 / +54 (221) 509-6657</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-12">
+                    <div class="node node-terciario dependencia-1" id="node-12">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Jefe Departamento" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Unidad de Coordinación Técnico Legal y de Relacionamiento
                                     Institucional</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Rouillet, Gabriel Teófilo</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Director</i>
+                                </div>
+                                <div class="node-contact-info">
+                                    <div class="contact-address">Calle 50 N°889 La Plata</div>
+                                    <div class="contact-phone">(0221) 412-1042</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-13">
+                    <div class="node node-terciario dependencia-1" id="node-13">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Jefe Departamento" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Unidad de Coordinación Técnica de las Delegaciones
                                     Administrativas Departamentales</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Gentili, Mariana Marcela</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Directora</i>
+                                </div>
+                                <div class="node-contact-info">
+                                    <div class="contact-address">Calle 50 N°889 La Plata</div>
+                                    <div class="contact-phone">(221) 412-1000</div>
                                 </div>
                             </div>
                         </div>
@@ -356,19 +355,18 @@
                 </div>
 
                 <!-- Nivel 2.2 -->
-                <div class="node node-secundario" id="node-14" data-bs-toggle="tooltip" data-bs-placement="top"
-                    title="Área de asuntos fiscales">
+                <div class="node node-secundario dependencia-2" id="node-14" data-bs-toggle="tooltip" data-bs-placement="top" title="Secretaría de Control Disciplinario y Enjuiciamiento">
                     <div class="branch"></div>
                     <div class="row align-items-center">
                         <div class="col-md-1 col-sm-2">
-                            <img src="/api/placeholder/80/80" alt="Fiscal General" class="img-fluid profile-img">
+                            <img src="assets/miguel-de-lezica.jpg" alt="Miguel de Lezica" class="img-fluid profile-img">
                         </div>
                         <div class="col-md-10 col-sm-8">
                             <div class="node-title">Secretaría de Control Disciplinario y Enjuiciamiento</div>
                             <div class="node-person">
                                 <i class="bi bi-person-circle"> Dr. Miguel de Lezica</i>
                             </div>
-                            <div class="node-subtitle">
+                            <div class="node-cargo">
                                 <i class="bi bi-person-workspace"> Secretario</i>
                             </div>
                         </div>
@@ -381,36 +379,30 @@
                 <!-- Contenedor de hijos -->
                 <div class="children-container" id="children-node-14">
                     <!-- Nivel 3 -->
-                    <div class="node node-terciario" id="node-15">
+                    <div class="node node-terciario dependencia-2" id="node-15">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Fiscal" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Departamento de Control Disciplinario</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dra. María Julieta Battistotti</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretaria</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-16">
+                    <div class="node node-terciario dependencia-2" id="node-16">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Fiscal" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Departamento de Enjuiciamiento de Magistrados</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dr. Federico Agustín Mentasti</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretario</i>
                                 </div>
                             </div>
@@ -419,19 +411,18 @@
                 </div>
 
                 <!-- Nivel 2.3 -->
-                <div class="node node-secundario" id="node-17" data-bs-toggle="tooltip" data-bs-placement="top"
-                    title="Área administrativa">
+                <div class="node node-secundario dependencia-3" id="node-17" data-bs-toggle="tooltip" data-bs-placement="top" title="Secretaría de Estrategia Institucional y Gestión">
                     <div class="branch"></div>
                     <div class="row align-items-center">
                         <div class="col-md-1 col-sm-2">
-                            <img src="/api/placeholder/80/80" alt="Secretario General" class="img-fluid profile-img">
+                            <img src="assets/susana-deferrari.jpg" alt="Susana Elena Deferrari" class="img-fluid profile-img">
                         </div>
                         <div class="col-md-10 col-sm-8">
                             <div class="node-title">Secretaría de Estrategia Institucional y Gestión</div>
                             <div class="node-person">
                                 <i class="bi bi-person-circle"> Dra. Susana Elena Deferrari</i>
                             </div>
-                            <div class="node-subtitle">
+                            <div class="node-cargo">
                                 <i class="bi bi-person-workspace"> Secretaria</i>
                             </div>
                         </div>
@@ -444,31 +435,24 @@
                 <!-- Contenedor de hijos -->
                 <div class="children-container" id="children-node-17">
                     <!-- Nivel 3 -->
-                    <div class="node node-terciario" id="node-18">
+                    <div class="node node-terciario dependencia-3" id="node-18">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Departamento de Control de Gestión</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Lic. Ricardo Burry</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretario</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-19">
+                    <div class="node node-terciario dependencia-3" id="node-19">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director Administración"
-                                    class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Área Social</div>
                             </div>
@@ -479,76 +463,60 @@
                     </div>
                     <!-- Hijos nivel 3.1.1 -->
                     <div class="children-container" id="children-node-19">
-                        <div class="node node-cuarto" id="node-20">
+                        <div class="node node-cuarto dependencia-3" id="node-20">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Curaduría General</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Dra. Ana Carolina Santi</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Curadora General</i>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-21">
+                        <div class="node node-cuarto dependencia-3" id="node-21">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Centro de Capacitación</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Dr. Martín E. Carrique</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subsecretario</i>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-22">
+                        <div class="node node-cuarto dependencia-3" id="node-22">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Oficina Central de Mediación</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Dra. Sandra M. Bajkovec</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subsecretaria</i>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-23">
+                        <div class="node node-cuarto dependencia-3" id="node-23">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Sistema sostén para menores tutelados</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Dr. Ignacio Carlos Rigone</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subsecretario</i>
                                     </div>
                                 </div>
@@ -556,65 +524,53 @@
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-24">
+                    <div class="node node-terciario dependencia-3" id="node-24">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director Sistemas" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Registro Único de Personas Detenidas (R.U.D)</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dr. Mariano Martín Salgado</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretario</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-25">
+                    <div class="node node-terciario dependencia-3" id="node-25">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director Sistemas" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Registro Penal de Violencia Familiar y de Género (REVIFAG)</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dr. Mariano Martín Salgado</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretario</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-26">
+                    <div class="node node-terciario dependencia-3" id="node-26">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director Sistemas" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Programa Casas de Justicia</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dr. Eduardo Rousseau</i>
                                 </div>
-                                <div class="node-subtitle">Prosecretario con funciones de Coordinador del Programa de
+                                <div class="node-cargo">Prosecretario con funciones de Coordinador del Programa de
                                     Casas de Justicia</div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-27">
+                    <div class="node node-terciario dependencia-3" id="node-27">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director Sistemas" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Área Jurisdiccional</div>
                             </div>
@@ -626,58 +582,46 @@
 
                     <!-- Hijos nivel 3.1.2 -->
                     <div class="children-container" id="children-node-27">
-                        <div class="node node-cuarto" id="node-28">
+                        <div class="node node-cuarto dependencia-3" id="node-28">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Sala de relatoría en Asuntos Constitucionales y
                                         Administrativos</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Dra. Mónica Graciela Andrieu</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subsecretaria</i>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-29">
+                        <div class="node node-cuarto dependencia-3" id="node-29">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Sala de relatoría en materia de menores e incapaces</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Dra. Marcela Piccioni</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subsecretaria</i>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-30">
+                        <div class="node node-cuarto dependencia-3" id="node-30">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Sala de relatoría Civil, Comercial y Laboral</div>
                                     <div class="node-person">
                                         <i class="bi bi-person-circle"> Dra. Claudia Molina Carranza</i>
                                     </div>
-                                    <div class="node-subtitle">
+                                    <div class="node-cargo">
                                         <i class="bi bi-person-workspace"> Subsecretaria</i>
                                     </div>
                                 </div>
@@ -685,36 +629,30 @@
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-31">
+                    <div class="node node-terciario dependencia-3" id="node-31">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director Sistemas" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Registro de los Procesos del Niño (R.P.N)</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dr. Mariano Martín Salgado</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretario</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-32">
+                    <div class="node node-terciario dependencia-3" id="node-32">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director Sistemas" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Registro de Violencia Institucional (R.V.I)</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dr. Mariano Martín Salgado</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretario</i>
                                 </div>
                             </div>
@@ -723,19 +661,18 @@
                 </div>
 
                 <!-- Nivel 2.4 -->
-                <div class="node node-secundario" id="node-33" data-bs-toggle="tooltip" data-bs-placement="top"
-                    title="Área de comunicación">
+                <div class="node node-secundario dependencia-4" id="node-33" data-bs-toggle="tooltip" data-bs-placement="top" title="Secretaría General">
                     <div class="branch"></div>
                     <div class="row align-items-center">
                         <div class="col-md-1 col-sm-2">
-                            <img src="/api/placeholder/80/80" alt="Secretaria General" class="img-fluid profile-img">
+                            <img src="assets/carlos-pettoruti.jpg" alt="Carlos Enrique Pettoruti" class="img-fluid profile-img">
                         </div>
                         <div class="col-md-10 col-sm-8">
                             <div class="node-title">Secretaría General</div>
                             <div class="node-person">
                                 <i class="bi bi-person-circle"> Dr. Carlos Enrique Pettoruti</i>
                             </div>
-                            <div class="node-subtitle">
+                            <div class="node-cargo">
                                 <i class="bi bi-person-workspace"> Secretario</i>
                             </div>
                         </div>
@@ -748,48 +685,42 @@
                 <!-- Contenedor de hijos -->
                 <div class="children-container" id="children-node-33">
                     <!-- Nivel 3 -->
-                    <div class="node node-terciario" id="node-34">
+                    <div class="node node-terciario dependencia-4" id="node-34">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Subsecretaría de Personal</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dra. Viviana Ethel Montes de Oca</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretaria</i>
                                 </div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dr. Ernesto Daniel Roca</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Prosecretario</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-35">
+                    <div class="node node-terciario dependencia-4" id="node-35">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Departamento de Arquitectura e Infraestructura</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Ing. Guillermo Emir Raggio</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretario</i>
                                 </div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Arq. Sergio Vidal Sprauer</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Director</i>
                                 </div>
                             </div>
@@ -801,65 +732,45 @@
 
                     <!-- Hijos -->
                     <div class="children-container" id="children-node-35">
-                        <div class="node node-cuarto" id="node-36">
+                        <div class="node node-cuarto dependencia-4" id="node-36">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Creación y Evaluación de Proyectos</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-37">
+                        <div class="node node-cuarto dependencia-4" id="node-37">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Equipamiento y Diseño</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-38">
+                        <div class="node node-cuarto dependencia-4" id="node-38">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Sector Administrativo</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-39">
+                        <div class="node node-cuarto dependencia-4" id="node-39">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Sector de Mantenimiento</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-40">
+                        <div class="node node-cuarto dependencia-4" id="node-40">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Delegaciones de Arquitectura</div>
                                 </div>
@@ -867,12 +778,9 @@
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-41">
+                    <div class="node node-terciario dependencia-4" id="node-41">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Departamento de Automotores</div>
                                 <div class="node-person">
@@ -887,39 +795,27 @@
 
                     <!-- Hijos -->
                     <div class="children-container" id="children-node-41">
-                        <div class="node node-cuarto" id="node-42">
+                        <div class="node node-cuarto dependencia-4" id="node-42">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Área Administrativa</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-43">
+                        <div class="node node-cuarto dependencia-4" id="node-43">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Área Operativa</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-44">
+                        <div class="node node-cuarto dependencia-4" id="node-44">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Sector de Mecánica</div>
                                 </div>
@@ -928,18 +824,15 @@
                     </div>
 
 
-                    <div class="node node-terciario" id="node-45">
+                    <div class="node node-terciario dependencia-4" id="node-45">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Subsecretaría de Informática</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Ing. Daniela Barbera</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretaria</i>
                                 </div>
                                 <div class="node-person">
@@ -948,7 +841,7 @@
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Lic. Mauro Sayavedra</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Prosecretarios</i>
                                 </div>
                             </div>
@@ -960,65 +853,45 @@
 
                     <!-- Hijos -->
                     <div class="children-container" id="children-node-45">
-                        <div class="node node-cuarto" id="node-46">
+                        <div class="node node-cuarto dependencia-4" id="node-46">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Ingeniería en Sistemas</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-47">
+                        <div class="node node-cuarto dependencia-4" id="node-47">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Tecnología y Operaciones</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-48">
+                        <div class="node node-cuarto dependencia-4" id="node-48">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Sector de Soporte Técnico</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-49">
+                        <div class="node node-cuarto dependencia-4" id="node-49">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Sector Administrativo</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-50">
+                        <div class="node node-cuarto dependencia-4" id="node-50">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Delegaciones de Informática</div>
                                 </div>
@@ -1027,18 +900,15 @@
                     </div>
 
 
-                    <div class="node node-terciario" id="node-51">
+                    <div class="node node-terciario dependencia-4" id="node-51">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Departamento de Estadística</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dra. Alba Barreto</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Directora y Subsecretaria</i>
                                 </div>
                                 <div class="col-md-1 col-sm-2 text-end">
@@ -1050,26 +920,18 @@
 
                     <!-- Hijos -->
                     <div class="children-container" id="children-node-51">
-                        <div class="node node-cuarto" id="node-52">
+                        <div class="node node-cuarto dependencia-4" id="node-52">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Área Ministerio Público</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-53">
+                        <div class="node node-cuarto dependencia-4" id="node-53">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title">Área Jurisdiccional</div>
                                 </div>
@@ -1077,18 +939,15 @@
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-54">
+                    <div class="node node-terciario dependencia-4" id="node-54">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Mesa General de Entradas</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Recavarren, Mauro</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Auxiliar Letrado</i>
                                 </div>
                             </div>
@@ -1097,12 +956,11 @@
                 </div>
 
                 <!-- Nivel 2.5 -->
-                <div class="node node-secundario" id="node-55" data-bs-toggle="tooltip" data-bs-placement="top"
-                    title="Área de política institucional">
+                <div class="node node-secundario dependencia-5" id="node-55" data-bs-toggle="tooltip" data-bs-placement="top" title="Secretaría de Política Criminal, Coordinación Fiscal e Instrucción Penal">
                     <div class="branch"></div>
                     <div class="row align-items-center">
                         <div class="col-md-1 col-sm-2">
-                            <img src="/api/placeholder/80/80" alt="Secretaria General" class="img-fluid profile-img">
+                            <img src="assets/francisco-pont.jpg" alt="Francisco Pont Vergés" class="img-fluid profile-img">
                         </div>
                         <div class="col-md-10 col-sm-8">
                             <div class="node-title">Secretaría de Política Criminal, Coordinación Fiscal e
@@ -1111,7 +969,7 @@
                             <div class="node-person">
                                 <i class="bi bi-person-circle"> Dr. Francisco Pont Vergés</i>
                             </div>
-                            <div class="node-subtitle">
+                            <div class="node-cargo">
                                 <i class="bi bi-person-workspace"> Secretario</i>
                             </div>
                         </div>
@@ -1123,18 +981,15 @@
 
                 <!-- Contenedor de hijos -->
                 <div class="children-container" id="children-node-55">
-                    <div class="node node-terciario" id="node-56">
+                    <div class="node node-terciario dependencia-5" id="node-56">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Subsecretaría de Politica Criminal</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dr. Daniel Horacio Lago</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Secretario</i>
                                 </div>
                             </div>
@@ -1146,39 +1001,27 @@
 
                     <!-- Hijos -->
                     <div class="children-container" id="children-node-56">
-                        <div class="node node-cuarto" id="node-57">
+                        <div class="node node-cuarto dependencia-5" id="node-57">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title"> Oficina de control y apoyo a Ayudantías Fiscales </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-58">
+                        <div class="node node-cuarto dependencia-5" id="node-58">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title"> Oficina de seguimiento de Convenios</div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="node node-cuarto" id="node-59">
+                        <div class="node node-cuarto dependencia-5" id="node-59">
                             <div class="branch"></div>
                             <div class="row align-items-center">
-                                <div class="col-md-1 col-sm-2">
-                                    <img src="/api/placeholder/80/80" alt="Jefe Departamento"
-                                        class="img-fluid profile-img">
-                                </div>
                                 <div class="col-md-10 col-sm-9">
                                     <div class="node-title"> Oficina Coordinadora en Materia de Delitos Cometidos en
                                         Espectáculos Deportivos y Conexos</div>
@@ -1187,161 +1030,134 @@
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-60">
+                    <div class="node node-terciario dependencia-5" id="node-60">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title"> Departamento de Delitos derivados de la Ley de Estupefacientes
                                     N° 23.737</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Wuhsagk, Pablo Guillermo</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Director</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-61">
+                    <div class="node node-terciario dependencia-5" id="node-61">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title"> Departamento de Ciberdelitos y Tecnologías Aplicadas</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Gisela Burcatt</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretaria</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-62">
+                    <div class="node node-terciario dependencia-5" id="node-62">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title"> Departamento de Coordinación de Institutos Forenses y Gabinetes
                                     Periciales</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Attarian Mena, María Alejandra</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Coordinadora</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-63">
+                    <div class="node node-terciario dependencia-5" id="node-63">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title"> Subsecretaría de Políticas de Género y Violencia Familiar</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Rubio, María Mercedes</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretaria</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-64">
+                    <div class="node node-terciario dependencia-5" id="node-64">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title"> Subsecretaría de Derechos Humanos, Políticas Penitenciarias y
                                     Violencia Institucional</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dr. Maximiliano Pagani</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretario</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-65">
+                    <div class="node node-terciario dependencia-5" id="node-65">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title"> Departamento de Asistencia a las Víctimas, Denuncias y
                                     Resolución Alternativa de Conflictos</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Furio, Sandra Elena</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretaria</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-66">
+                    <div class="node node-terciario dependencia-5" id="node-66">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title"> Departamento de Delitos Conexos a la Trata de Personas,
                                     Pornografía Infantil y Grooming</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Dra. Eleonora N. Weingast</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Relatora Letrada</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-67">
+                    <div class="node node-terciario dependencia-5" id="node-67">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title"> Departamento de Jurisdicción Penal</div>
                                 <div class="node-person">
                                     <i class="bi bi-person-circle"> Luzardo, Wendell José G.</i>
                                 </div>
-                                <div class="node-subtitle">
+                                <div class="node-cargo">
                                     <i class="bi bi-person-workspace"> Subsecretario</i>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="node node-terciario" id="node-68">
+                    <div class="node node-terciario dependencia-5" id="node-68">
                         <div class="branch"></div>
                         <div class="row align-items-center">
-                            <div class="col-md-1 col-sm-2">
-                                <img src="/api/placeholder/80/80" alt="Director RRHH" class="img-fluid profile-img">
-                            </div>
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Departamento de Policía Judicial</div>
                             </div>
