@@ -15,8 +15,9 @@ body {
 }
 
 .node {
-    border: 2px solid #0d6efd;
-    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 15px;
     padding: 15px;
     margin: 10px 0;
     background-color: #fff;
@@ -42,16 +43,45 @@ body {
 .node-terciario {
     background-color: #e9ecef;
     color: #212529;
-    border-color: #6c757d;
     margin-left: 80px;
 }
 
 .node-cuarto {
     background-color: #f8f9fa;
     color: #212529;
-    border-color: #6c757d;
     margin-left: 120px;
 }
+
+
+ .dependencia-1 {
+    border-color: #c8b0c3;
+    border-width: 6px;
+    border-left: 12px solid #c8b0c3;
+}
+
+.dependencia-2 {
+    border-color: #ffffbf;
+    border-width: 6px;
+    border-left: 12px solid #ffffbf;
+}
+
+.dependencia-3 {
+    border-color: #d8e8bb;
+    border-width: 6px;
+    border-left: 12px solid #d8e8bb;
+}
+
+.dependencia-4 {
+    border-color: #a7cdcb;
+    border-width: 6px;
+    border-left: 12px solid #a7cdcb;
+}
+
+.dependencia-5 {
+    border-color: #d7c8a9;
+    border-width: 6px;
+    border-left: 12px solid #d7c8a9;
+} 
 
 .node-title {
     font-weight: bold;
@@ -126,7 +156,11 @@ body {
     border-radius: 50%;
     margin: 0 auto;
     display: block;
+    object-fit: cover;
+    height: 80px;
+    width: 80px;
 }
+
 
 .node-principal .node-subtitle,
 .node-principal .node-person {
@@ -226,5 +260,13 @@ body {
     
     .node-contact-info {
         font-size: 10px;
+    }
+    
+    .dependencia-1,
+    .dependencia-2,
+    .dependencia-3,
+    .dependencia-4,
+    .dependencia-5 {
+        border-width: 4px;
     }
 }
