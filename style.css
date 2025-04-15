@@ -96,7 +96,7 @@ body {
     margin-bottom: 3px;
 }
 
-.node-subtitle {
+.node-cargo {
     font-size: 12px;
     color: #6c757d;
 }
@@ -162,12 +162,12 @@ body {
 }
 
 
-.node-principal .node-subtitle,
+.node-principal .node-cargo,
 .node-principal .node-person {
     color: #e9ecef;
 }
 
-.node-secundario .node-subtitle,
+.node-secundario .node-cargo,
 .node-secundario .node-person {
     color: #e9ecef;
 }
@@ -230,7 +230,7 @@ body {
     top: 25px;
     width: 20px;
     height: 2px;
-    background-color: #dee2e6;
+    background-color: #8b8c8cd7;
 }
 
 .search-container {
