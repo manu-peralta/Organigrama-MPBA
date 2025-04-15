@@ -13,8 +13,11 @@
 <body>
     <div class="container-fluid">
         <div class="header">
-            <h1>Organigrama Procuración General</h1>
-            <p>Visualización jerárquica de la estructura organizacional</p>
+            <img src="assets/logo2021.png" alt="Logo Ministerio Público" class="logo">
+            <div class="titulo">
+                <h1>Organigrama Procuración General</h1>
+                <p>Visualización jerárquica de la estructura organizacional</p>
+            </div>
         </div>
 
         <div class="row search-container">
@@ -22,7 +25,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" id="search-input"
                         placeholder="Buscar por nombre, cargo o departamento...">
-                    <button class="btn btn-primary" id="search-btn">Buscar</button>
+                    <button class="btn btn-primary" style="background-color: #003366;" id="search-btn">Buscar</button>
                 </div>
             </div>
         </div>
@@ -30,21 +33,11 @@
         <div class="row">
             <div class="col-md-6 offset-md-3 mb-3">
                 <div class="d-flex justify-content-center">
-                    <button class="btn btn-outline-primary me-2" onclick="expandAll()">
+                    <button class="btn btn-outline-sistema me-2" onclick="expandAll()">
                         <i class="bi bi-arrows-expand"></i> Expandir Todo</button>
                     <button class="btn btn-outline-secondary" onclick="collapseAll()">
                         <i class="bi bi-arrows-collapse"></i> Colapsar Todo</button>
                 </div>
-            </div>
-        </div>
-
-        <div class="row breadcrumb-container">
-            <div class="col-12">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb" id="navigation-breadcrumb">
-                        <li class="breadcrumb-item active">Inicio</li>
-                    </ol>
-                </nav>
             </div>
         </div>
 
@@ -67,7 +60,7 @@
                         </div>
                     </div>
                     <div class="col-md-1 col-sm-2 text-end">
-                        <div class="toggle-btn" onclick="toggleChildren('+')"><i class="bi bi-plus"></i></div>
+                        <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i></div>
                     </div>
                 </div>
             </div>
@@ -76,7 +69,7 @@
             <div class="children-container" id="children-node-1">
                 <!-- Nivel 2.1 -->
                 <div class="node node-secundario dependencia-1" id="node-2" data-bs-toggle="tooltip"
-                    data-bs-placement="top" title="Secretaría de Administración">
+                    data-bs-placement="top" title="Secretaría de Administración" onclick="toggleChildren('node-2')">
                     <div class="branch"></div>
                     <div class="row align-items-center">
                         <div class="col-md-1 col-sm-2">
@@ -93,7 +86,7 @@
                             </div>
                         </div>
                         <div class="col-md-1 col-sm-2 text-end">
-                            <div class="toggle-btn" onclick="toggleChildren('node-2')"><i class="bi bi-plus"></i></div>
+                            <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i></div>
                         </div>
                     </div>
                 </div>
@@ -101,7 +94,7 @@
                 <!-- Hijos nivel 2.1 -->
                 <div class="children-container" id="children-node-2">
                     <!-- 3.1.1 -->
-                    <div class="node node-terciario dependencia-1" id="node-3">
+                    <div class="node node-terciario dependencia-1" id="node-3" onclick="toggleChildren('node-3')">
                         <div class="branch"></div>
                         <div class="row align-items-center">
                             <div class="col-md-10 col-sm-9">
@@ -118,7 +111,7 @@
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-2 text-end">
-                                <div class="toggle-btn" onclick="toggleChildren('node-3')"><i class="bi bi-plus"></i>
+                                <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +199,7 @@
                         </div>
                     </div>
 
-                    <div class="node node-terciario dependencia-1" id="node-7">
+                    <div class="node node-terciario dependencia-1" id="node-7" onclick="toggleChildren('node-7')">
                         <div class="branch"></div>
                         <div class="row align-items-center">
                             <div class="col-md-10 col-sm-9">
@@ -223,7 +216,7 @@
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-2 text-end">
-                                <div class="toggle-btn" onclick="toggleChildren('node-7')"><i class="bi bi-plus"></i>
+                                <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i>
                                 </div>
                             </div>
                         </div>
@@ -364,7 +357,8 @@
 
                 <!-- Nivel 2.2 -->
                 <div class="node node-secundario dependencia-2" id="node-14" data-bs-toggle="tooltip"
-                    data-bs-placement="top" title="Secretaría de Control Disciplinario y Enjuiciamiento">
+                    data-bs-placement="top" title="Secretaría de Control Disciplinario y Enjuiciamiento"
+                    onclick="toggleChildren('node-14')">
                     <div class="branch"></div>
                     <div class="row align-items-center">
                         <div class="col-md-1 col-sm-2">
@@ -380,7 +374,7 @@
                             </div>
                         </div>
                         <div class="col-md-1 col-sm-2 text-end">
-                            <div class="toggle-btn" onclick="toggleChildren('node-14')"><i class="bi bi-plus"></i></div>
+                            <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i></div>
                         </div>
                     </div>
                 </div>
@@ -432,7 +426,8 @@
 
                 <!-- Nivel 2.3 -->
                 <div class="node node-secundario dependencia-3" id="node-17" data-bs-toggle="tooltip"
-                    data-bs-placement="top" title="Secretaría de Estrategia Institucional y Gestión">
+                    data-bs-placement="top" title="Secretaría de Estrategia Institucional y Gestión"
+                    onclick="toggleChildren('node-17')">
                     <div class="branch"></div>
                     <div class="row align-items-center">
                         <div class="col-md-1 col-sm-2">
@@ -449,7 +444,7 @@
                             </div>
                         </div>
                         <div class="col-md-1 col-sm-2 text-end">
-                            <div class="toggle-btn" onclick="toggleChildren('node-17')"><i class="bi bi-plus"></i></div>
+                            <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i></div>
                         </div>
                     </div>
                 </div>
@@ -477,14 +472,14 @@
                         </div>
                     </div>
 
-                    <div class="node node-terciario dependencia-3" id="node-19">
+                    <div class="node node-terciario dependencia-3" id="node-19" onclick="toggleChildren('node-19')">
                         <div class="branch"></div>
                         <div class="row align-items-center">
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Área Social</div>
                             </div>
                             <div class="col-md-1 col-sm-2 text-end">
-                                <div class="toggle-btn" onclick="toggleChildren('node-19')"><i class="bi bi-plus"></i>
+                                <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i>
                                 </div>
                             </div>
                         </div>
@@ -632,14 +627,14 @@
                         </div>
                     </div>
 
-                    <div class="node node-terciario dependencia-3" id="node-27">
+                    <div class="node node-terciario dependencia-3" id="node-27" onclick="toggleChildren('node-27')">
                         <div class="branch"></div>
                         <div class="row align-items-center">
                             <div class="col-md-10 col-sm-9">
                                 <div class="node-title">Área Jurisdiccional</div>
                             </div>
                             <div class="col-md-1 col-sm-2 text-end">
-                                <div class="toggle-btn" onclick="toggleChildren('node-27')"><i class="bi bi-plus"></i>
+                                <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i>
                                 </div>
                             </div>
                         </div>
@@ -753,7 +748,7 @@
 
                 <!-- Nivel 2.4 -->
                 <div class="node node-secundario dependencia-4" id="node-33" data-bs-toggle="tooltip"
-                    data-bs-placement="top" title="Secretaría General">
+                    data-bs-placement="top" title="Secretaría General" onclick="toggleChildren('node-33')">
                     <div class="branch"></div>
                     <div class="row align-items-center">
                         <div class="col-md-1 col-sm-2">
@@ -770,7 +765,7 @@
                             </div>
                         </div>
                         <div class="col-md-1 col-sm-2 text-end">
-                            <div class="toggle-btn" onclick="toggleChildren('node-33')"><i class="bi bi-plus"></i></div>
+                            <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i></div>
                         </div>
                     </div>
                 </div>
@@ -803,7 +798,7 @@
                         </div>
                     </div>
 
-                    <div class="node node-terciario dependencia-4" id="node-35">
+                    <div class="node node-terciario dependencia-4" id="node-35" onclick="toggleChildren('node-35')">
                         <div class="branch"></div>
                         <div class="row align-items-center">
                             <div class="col-md-10 col-sm-9">
@@ -826,7 +821,7 @@
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-2 text-end">
-                                <div class="toggle-btn" onclick="toggleChildren('node-35')"><i class="bi bi-plus"></i>
+                                <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i>
                                 </div>
                             </div>
                         </div>
@@ -880,7 +875,7 @@
                         </div>
                     </div>
 
-                    <div class="node node-terciario dependencia-4" id="node-41">
+                    <div class="node node-terciario dependencia-4" id="node-41" onclick="toggleChildren('node-41')">
                         <div class="branch"></div>
                         <div class="row align-items-center">
                             <div class="col-md-10 col-sm-9">
@@ -894,7 +889,7 @@
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-2 text-end">
-                                <div class="toggle-btn" onclick="toggleChildren('node-41')"><i class="bi bi-plus"></i>
+                                <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i>
                                 </div>
                             </div>
                         </div>
@@ -931,7 +926,7 @@
                     </div>
 
 
-                    <div class="node node-terciario dependencia-4" id="node-45">
+                    <div class="node node-terciario dependencia-4" id="node-45" onclick="toggleChildren('node-45')">
                         <div class="branch"></div>
                         <div class="row align-items-center">
                             <div class="col-md-10 col-sm-9">
@@ -957,7 +952,7 @@
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-2 text-end">
-                                <div class="toggle-btn" onclick="toggleChildren('node-45')"><i class="bi bi-plus"></i>
+                                <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i>
                                 </div>
                             </div>
                         </div>
@@ -1012,7 +1007,7 @@
                     </div>
 
 
-                    <div class="node node-terciario dependencia-4" id="node-51">
+                    <div class="node node-terciario dependencia-4" id="node-51" onclick="toggleChildren('node-51')">
                         <div class="branch"></div>
                         <div class="row align-items-center">
                             <div class="col-md-10 col-sm-9">
@@ -1029,8 +1024,7 @@
                                         509-6856</div>
                                 </div>
                                 <div class="col-md-1 col-sm-2 text-end">
-                                    <div class="toggle-btn" onclick="toggleChildren('node-51')"><i
-                                            class="bi bi-plus"></i></div>
+                                    <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -1080,7 +1074,8 @@
                 <!-- Nivel 2.5 -->
                 <div class="node node-secundario dependencia-5" id="node-55" data-bs-toggle="tooltip"
                     data-bs-placement="top"
-                    title="Secretaría de Política Criminal, Coordinación Fiscal e Instrucción Penal">
+                    title="Secretaría de Política Criminal, Coordinación Fiscal e Instrucción Penal"
+                    onclick="toggleChildren('node-55')">
                     <div class="branch"></div>
                     <div class="row align-items-center">
                         <div class="col-md-1 col-sm-2">
@@ -1099,14 +1094,14 @@
                             </div>
                         </div>
                         <div class="col-md-1 col-sm-2 text-end">
-                            <div class="toggle-btn" onclick="toggleChildren('node-55')"><i class="bi bi-plus"></i></div>
+                            <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Contenedor de hijos -->
                 <div class="children-container" id="children-node-55">
-                    <div class="node node-terciario dependencia-5" id="node-56">
+                    <div class="node node-terciario dependencia-5" id="node-56" onclick="toggleChildren('node-56')">
                         <div class="branch"></div>
                         <div class="row align-items-center">
                             <div class="col-md-10 col-sm-9">
@@ -1123,7 +1118,7 @@
                                 </div>
                             </div>
                             <div class="col-md-1 col-sm-2 text-end">
-                                <div class="toggle-btn" onclick="toggleChildren('node-56')"><i class="bi bi-plus"></i>
+                                <div class="toggle-btn" onclick="toggleChildren()"><i class="bi bi-plus"></i>
                                 </div>
                             </div>
                         </div>
@@ -1335,13 +1330,92 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="unidades-adicionales-container">
+                    <div class="node node-quinto unidad-adicional" id="node-69">
+                        <div class="node-title">Auditoría contable</div>
+                        <div class="node-person">
+                            <i class="bi bi-person-circle"> Cdor. Daniel Horacio Yanes</i>
+                        </div>
+                        <div class="node-cargo">
+                            <i class="bi bi-person-workspace"> Titular de la Auditoría Contable</i>
+                        </div>
+                        <div class="node-contact-info">
+                            <div class="contact-address">Calle 50 N°889 La Plata</div>
+                            <div class="contact-phone">+54 (221) 509-6610 / +54 (221) 509-6611 </div>
+                        </div>
+                    </div>
+
+                    <div class="node node-quinto unidad-adicional" id="node-70">
+                        <div class="node-title">MPBA 2050</div>
+                        <div class="node-person">
+                            <i class="bi bi-person-circle"> Dr. Patricio Moyano Peña</i>
+                        </div>
+                        <div class="node-cargo">
+                            <i class="bi bi-person-workspace"> Titular</i>
+                        </div>
+                        <div class="node-contact-info">
+                            <div class="contact-address">Calle 50 N°889 La Plata</div>
+                            <div class="contact-phone">+54 (221) 412-1076 </div>
+                        </div>
+                    </div>
+
+                    <div class="node node-quinto unidad-adicional" id="node-71">
+                        <div class="node-title">Prensa y ceremonial</div>
+                        <div class="node-person">
+                            <i class="bi bi-person-circle"> Dr. Pablo Morales</i>
+                        </div>
+                        <div class="node-cargo">
+                            <i class="bi bi-person-workspace"> Subsecretario</i>
+                        </div>
+                        <div class="node-contact-info">
+                            <div class="contact-address">Calle 53 N°455 La Plata</div>
+                            <div class="contact-phone">(221) 410-2676</div>
+                        </div>
+                    </div>
+
+                    <div class="node node-quinto unidad-adicional" id="node-72">
+                        <div class="node-title">Unidad de Asesoramiento, Coordinación y Seguimiento Jurídico</div>
+                        <div class="node-person">
+                            <i class="bi bi-person-circle"> Dra. María José Adrogué</i>
+                        </div>
+                        <div class="node-cargo">
+                            <i class="bi bi-person-workspace"> Titular</i>
+                        </div>
+                        <div class="node-contact-info">
+                            <div class="contact-address">Calle 50 N°889 La Plata</div>
+                            <div class="contact-phone">(221) 412-1000</div>
+                        </div>
+                    </div>
+                    <div class="node node-quinto unidad-adicional" id="node-73">
+                        <div class="node-title">Secretaría Privada</div>
+                        <div class="node-contact-info">
+                            <div class="contact-address">Calle 13 N°770 La Plata</div>
+                            <div class="contact-phone">+54 (221) 509-6480 / +54 (221) 509-6482 </div>
+                        </div>
+                    </div>
+
+                    <div class="node node-quinto unidad-adicional" id="node-74">
+                        <div class="node-title">CIJUR: Centro de información jurídica</div>
+                        <div class="node-contact-info"></div>
+                    </div>
+
+                    <div class="node node-quinto unidad-adicional" id="node-75">
+                        <div class="node-title">Relaciones institucionales</div>
+                        <div class="node-contact-info"></div>
+                    </div>
+
+                    <div class="node node-quinto unidad-adicional" id="node-76">
+                        <div class="node-title">Sala de relatores</div>
+                        <div class="node-contact-info"></div>
+                    </div>
 
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
@@ -1352,13 +1426,26 @@
             return new bootstrap.Tooltip(tooltipTriggerEl)
         })
 
+        // Expandir hijos nodo 1
+        document.addEventListener('DOMContentLoaded', function () {
+            const node1 = document.getElementById('node-1');
+            if (node1) {
+                const childrenContainer = document.getElementById('children-node-1');
+                if (childrenContainer) {
+                    toggleChildren('node-1');
+                }
+            }
+        });
+
         // Función para expandir/colapsar nodos
         function toggleChildren(nodeId) {
             const node = document.getElementById(nodeId);
             const toggleBtn = node.querySelector('.toggle-btn i');
             const childrenContainer = document.getElementById('children-' + nodeId);
 
-            if (node.classList.contains('expanded')) {
+            const isExpanded = node.classList.contains('expanded');
+
+            if (isExpanded) {
                 node.classList.remove('expanded');
                 toggleBtn.classList.replace('bi-dash', 'bi-plus');
                 childrenContainer.style.display = 'none';
@@ -1368,12 +1455,10 @@
                 childrenContainer.style.display = 'block';
             }
 
-            // actualizo la miga de pan
-            updateBreadcrumb(nodeId, node.querySelector('.node-title').textContent);
         }
 
         // Función de búsqueda
-        // agrego el dropdwon
+        // agrego el dropdown
         document.querySelector('.search-container').insertAdjacentHTML('beforeend', `
     <div class="col-md-6 offset-md-3 mt-1 position-relative">
         <div id="search-results-dropdown" class="dropdown-menu w-100" style="display:none; max-height: 300px; overflow-y: auto;">
@@ -1481,32 +1566,6 @@
             return divider;
         }
 
-        function highlightAndNavigateTo(node) {
-            // resaltar el nodo
-            node.style.boxShadow = '0 0 10px 3px #0d6efd';
-
-            setTimeout(() => {
-                node.style.boxShadow = 'none';
-            }, 5000);
-
-            // expandir los padres
-            let parentNode = node.closest('.children-container');
-            while (parentNode) {
-                const parentId = parentNode.id.replace('children-', '');
-                const parent = document.getElementById(parentId);
-                if (parent) {
-                    parent.classList.add('expanded');
-                    const toggleBtn = parent.querySelector('.toggle-btn');
-                    if (toggleBtn) toggleBtn.textContent = '-';
-                    parentNode.style.display = 'block';
-                }
-                parentNode = parent ? parent.closest('.children-container') : null;
-            }
-
-            setTimeout(() => {
-                node.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 100);
-        }
 
         // Cerrar el dropdown cuando se hace clic afuera
         document.addEventListener('click', function (e) {
@@ -1532,23 +1591,32 @@
             }
         });
 
-        // Actualizar las migas de pan
-        function updateBreadcrumb(nodeId, nodeTitle) {
-            const breadcrumb = document.getElementById('navigation-breadcrumb');
 
-            breadcrumb.innerHTML = '<li class="breadcrumb-item"><a href="#" onclick="resetView()">Inicio</a></li>';
+        function highlightAndNavigateTo(node) {
+            // resaltar el nodo
+            node.style.boxShadow = '0 0 10px 3px #0d6efd';
 
-            const li = document.createElement('li');
-            li.classList.add('breadcrumb-item', 'active');
-            li.textContent = nodeTitle;
-            breadcrumb.appendChild(li);
-        }
+            setTimeout(() => {
+                node.style.boxShadow = 'none';
+            }, 5000);
 
-        // Resetear a la vista inicial
-        function resetView() {
-            collapseAll();
-            document.getElementById('navigation-breadcrumb').innerHTML = '<li class="breadcrumb-item active">Inicio</li>';
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            // expandir los padres
+            let parentNode = node.closest('.children-container');
+            while (parentNode) {
+                const parentId = parentNode.id.replace('children-', '');
+                const parent = document.getElementById(parentId);
+                if (parent) {
+                    parent.classList.add('expanded');
+                    const toggleBtn = parent.querySelector('.toggle-btn');
+                    if (toggleBtn) toggleBtn.textContent = '-';
+                    parentNode.style.display = 'block';
+                }
+                parentNode = parent ? parent.closest('.children-container') : null;
+            }
+
+            setTimeout(() => {
+                node.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 100);
         }
 
         // Expandir todos los nodos
@@ -1579,8 +1647,6 @@
                     if (childrenContainer) childrenContainer.style.display = 'none';
                 }
             });
-
-            document.getElementById('navigation-breadcrumb').innerHTML = '<li class="breadcrumb-item active">Inicio</li>';
         }
     </script>
 </body>
