@@ -385,6 +385,30 @@ position: absolute;
 }
 
 @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+    
+    .logo {
+        width: 200px;
+    }
+    
+    .titulo {
+        margin-left: 0; 
+        width: 100%;
+    }
+    
+    .titulo h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .titulo p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
     .node-secundario {
         margin-left: 20px;
     }
