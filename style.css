@@ -44,7 +44,7 @@ body {
     margin: 0 auto;
 }
 
-/* Paleta de colores institucional */
+/* paleta de colores institucional */
 :root {
     --color-primario: #003366;
     --color-secundario: #405875;
@@ -62,7 +62,7 @@ body {
     --color-terciario-hover: #d9e5f0;
 }
 
-/* Estilos base para todos los nodos */
+/* estilos base para todos los nodos */
 .node {
     border-style: solid;
     border-width: 1px;
@@ -139,7 +139,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* Contenedor específico para las unidades adicionales */
+/* contenedor para las unidades adicionales */
 .unidades-adicionales-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -153,28 +153,7 @@ body {
     height: 100%;
 }
 
-/* colores de las dependencias */
-.dependencia-1 {
-    border-left: 8px solid #c69cbd;
-}
-
-.dependencia-2 {
-    border-left: 8px solid #fefea1;
-}
-
-.dependencia-3 {
-    border-left: 8px solid #cfe7a1;
-}
-
-.dependencia-4 {
-    border-left: 8px solid #98ccc9;
-}
-
-.dependencia-5 {
-    border-left: 8px solid #d2bd93;
-}
-
-/* Estilos para unidades adicionales */
+/* estilos para unidades adicionales */
 .unidad-adicional {
     border-left: 6px solid var(--color-primario);
     background-color: #f8fafb;
@@ -202,8 +181,28 @@ body {
     color: var(--color-text-medium);
 }
 
+/* colores de las dependencias */
+.dependencia-1 {
+    border-left: 8px solid #c69cbd;
+}
 
-/* Contenidos del nodo */
+.dependencia-2 {
+    border-left: 8px solid #fefea1;
+}
+
+.dependencia-3 {
+    border-left: 8px solid #cfe7a1;
+}
+
+.dependencia-4 {
+    border-left: 8px solid #98ccc9;
+}
+
+.dependencia-5 {
+    border-left: 8px solid #d2bd93;
+}
+
+/* contenidos del nodo */
 .node-title {
     font-weight: bold;
     font-size: 17px;
