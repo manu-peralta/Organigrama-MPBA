@@ -1602,14 +1602,14 @@
 
             // expandir los padres
             let parentNode = node.closest('.children-container');
+            const visited = new Set();
+            
             while (parentNode) {
                 const parentId = parentNode.id.replace('children-', '');
                 const parent = document.getElementById(parentId);
-                if (parent) {
-                    parent.classList.add('expanded');
-                    const toggleBtn = parent.querySelector('.toggle-btn');
-                    if (toggleBtn) toggleBtn.textContent = '-';
-                    parentNode.style.display = 'block';
+                if (parent && !parent.classList.contains('expanded') && !visited.has(parentId)) {
+                    toggleChildren(parentId);
+                    visited.add(parentId);
                 }
                 parentNode = parent ? parent.closest('.children-container') : null;
             }
