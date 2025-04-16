@@ -8,7 +8,7 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     padding: 1.5rem;
     border-radius: 10px;
     font-family: 'Segoe UI', sans-serif;
@@ -22,7 +22,7 @@ body {
 
 .titulo {
     color: #003366;
-    margin-left: auto; 
+    margin-left: auto;
 }
 
 .titulo h1 {
@@ -46,19 +46,19 @@ body {
 
 /* Paleta de colores institucional */
 :root {
-    --color-primario: #003366;  
-    --color-secundario: #0066a1;
-    --color-terciario: #e7eef4; 
-    --color-cuarto: #f5f7fa;    
+    --color-primario: #003366;
+    --color-secundario: #405875;
+    --color-terciario: #e7eef4;
+    --color-cuarto: #f5f7fa;
     --color-quinto: #f0f2f5;
-    --color-accent: #b8cde0;        
-    --color-text-dark: #333333;     
-    --color-text-medium: #555555;   
-    --color-text-light: #ffffff;    
-    --color-border: #dcdfe5;        
+    --color-accent: #b8cde0;
+    --color-text-dark: #333333;
+    --color-text-medium: #555555;
+    --color-text-light: #ffffff;
+    --color-border: #dcdfe5;
 
     --color-primario-hover: #00264d;
-    --color-secundario-hover: #005688;
+    --color-secundario-hover: #344a63;
     --color-terciario-hover: #d9e5f0;
 }
 
@@ -71,8 +71,9 @@ body {
     margin: 10px 0;
     position: relative;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
     width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -111,9 +112,9 @@ body {
     color: var(--color-text-medium);
     margin-left: 140px;
     border-color: var(--color-border);
-    padding: 10px 15px; 
-    font-size: 0.95em;   
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    padding: 10px 15px;
+    font-size: 0.95em;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .node:has(.toggle-btn) {
@@ -122,55 +123,55 @@ body {
 
 .node-principal:has(.toggle-btn):hover {
     background-color: var(--color-primario-hover);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
 }
 
 .node-secundario:has(.toggle-btn):hover {
     background-color: var(--color-secundario-hover);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
 }
 
 .node-terciario:has(.toggle-btn):hover {
     background-color: var(--color-terciario-hover);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
 }
 
 /* Contenedor específico para las unidades adicionales */
 .unidades-adicionales-container {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
     margin-top: 15px;
     margin-left: 40px;
 }
 
 .unidades-adicionales-container .node-quinto {
-    margin-left: 0; 
-    height: 100%;  
+    margin-left: 0;
+    height: 100%;
 }
 
 /* colores de las dependencias */
 .dependencia-1 {
-    border-left: 8px solid #c69cbd;  
+    border-left: 8px solid #c69cbd;
 }
 
 .dependencia-2 {
-    border-left: 8px solid #fefea1;  
+    border-left: 8px solid #fefea1;
 }
 
 .dependencia-3 {
-    border-left: 8px solid #cfe7a1;  
+    border-left: 8px solid #cfe7a1;
 }
 
 .dependencia-4 {
-    border-left: 8px solid #98ccc9; 
+    border-left: 8px solid #98ccc9;
 }
 
 .dependencia-5 {
-    border-left: 8px solid #d2bd93; 
+    border-left: 8px solid #d2bd93;
 }
 
 /* Estilos para unidades adicionales */
@@ -194,6 +195,7 @@ body {
     margin-bottom: 2px;
     color: var(--color-text-dark);
 }
+
 .unidad-adicional .node-cargo {
     font-size: 12px;
     font-style: italic;
@@ -222,8 +224,9 @@ body {
 .node-contact-info {
     margin-top: 12px;
     padding-top: 10px;
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 /* iconos para contacto */
@@ -250,13 +253,13 @@ body {
 
 /* colores para textos por nivel */
 .node-principal .node-contact-info {
-    color: rgba(255,255,255,0.9);
-    border-top-color: rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.9);
+    border-top-color: rgba(255, 255, 255, 0.3);
 }
 
 .node-secundario .node-contact-info {
-    color: rgba(255,255,255,0.9);
-    border-top-color: rgba(255,255,255,0.3);
+    color: rgba(255, 255, 255, 0.9);
+    border-top-color: rgba(255, 255, 255, 0.3);
 }
 
 .node-principal .node-cargo,
@@ -299,14 +302,14 @@ body {
 
 /* estilos para botones */
 .toggle-btn {
-position: absolute;
+    position: absolute;
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
     width: 24px;
     height: 24px;
     border-radius: 50%;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     color: var(--color-text-light);
     display: flex;
     align-items: center;
@@ -314,22 +317,22 @@ position: absolute;
     cursor: pointer;
     z-index: 2;
     font-size: 12px;
-    border: 1px solid rgba(255,255,255,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     transition: all 0.2s ease;
 }
 
 .toggle-btn:hover {
     transform: translateY(-50%) scale(1.2);
-    box-shadow: 0 0 5px rgba(255,255,255,0.3);
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
 
 .node-principal .toggle-btn,
 .node-secundario .toggle-btn {
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     color: var(--color-text-light);
 }
 
-.node-terciario .toggle-btn{
+.node-terciario .toggle-btn {
     background-color: var(--color-secundario);
     color: var(--color-text-light);
 }
@@ -361,6 +364,7 @@ position: absolute;
     width: 2px;
     background-color: var(--color-border);
 }
+
 .children-container .left-border {
     height: calc(100% - 20px);
     top: 20px;
@@ -381,7 +385,7 @@ position: absolute;
     padding: 15px;
     background-color: white;
     border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 @media (max-width: 768px) {
@@ -390,29 +394,30 @@ position: absolute;
         padding: 1rem;
         gap: 1rem;
     }
-    
+
     .logo {
         width: 200px;
     }
-    
+
     .titulo {
-        margin-left: 0; 
+        margin-left: 0;
         width: 100%;
     }
-    
+
     .titulo h1 {
         font-size: 1.5rem;
         text-align: center;
     }
-    
+
     .titulo p {
         font-size: 0.9rem;
         text-align: center;
     }
+
     .node-secundario {
         margin-left: 20px;
     }
-    
+
     .node-terciario {
         margin-left: 40px;
     }
@@ -420,25 +425,25 @@ position: absolute;
     .node-cuarto {
         margin-left: 60px;
     }
-    
+
     .profile-img {
         max-width: 60px;
         height: 60px;
         width: 60px;
     }
-    
+
     .node-title {
         font-size: 14px;
     }
-    
+
     .node-person {
         font-size: 13px;
     }
-    
+
     .node-cargo {
         font-size: 12px;
     }
-    
+
     .node-contact-info {
         font-size: 11px;
     }
@@ -450,6 +455,20 @@ position: absolute;
 
     .unidad-adicional .node-title {
         font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 150px;
+    }
+
+    .titulo h1 {
+        font-size: 1.2rem;
+    }
+
+    .titulo p {
+        font-size: 0.8rem;
     }
 }
 
